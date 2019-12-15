@@ -11,7 +11,6 @@ public class MainViewModel extends ViewModel {
 
     private int todoIndex = 0;
 
-
     private Todo selectedTodo = new Todo();
 //    private final MutableLiveData<Todo> selectedTodo = new MutableLiveData<Todo>();
 

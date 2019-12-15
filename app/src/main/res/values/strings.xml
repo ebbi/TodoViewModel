@@ -1,34 +1,20 @@
 <resources>
     <string name="app_name">TodoViewModel</string>
     <string name="todo_title">todo title</string>
-    <string name="todo_title_hint">todo title hint</string>
-    <string name="todo_title_label">One line description of the todo</string>
-    <string name="todo_detail_label">detail of what to do</string>
-    <string name="todo_complete_label">is it complete?</string>
     <string name="todo_date">Todo date</string>
-    <string name="new_todo">New Todo</string>
 
     <string name="next">Next</string>
     <string name="prev">Prev</string>
-    <string name="todo_list_view">Todo list!</string>
-    <string name="textViewTodoDetail">TextViewTodoDetail</string>
-    <string name="todo_complete">complete</string>
-    <string name="todo_pending">pending</string>
-    <string name="textViewIntentData">Data from intent</string>
     <string name="detail">Detail</string>
-    <string name="buttonTodoDetailText">detail</string>
-    <string name="request_code_mismatch">requestCode in intent does not match the parent requestCode</string>
-    <string name="back_button_pressed">Back button pressed</string>
     <string name="complete">complete</string>
     <string name="pending">pending</string>
-    <string name="go">go</string>
-    <string name="delete"> ✗ Delete</string>
-    <string name="enter_todo">enter todo</string>
-    <string name="add"> + Add</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_detail_fragment">Detail Fragment ViewModel</string>
     <string name="todo_detail">Todo detail</string>
     <string name="update">Update</string>
+    <string name="add_todo">Add todo</string>
+    <string name="list_view_recyclerview">List view (RecyclerVIew)</string>
+    <string name="delete">Delete</string>
 
 </resources>
