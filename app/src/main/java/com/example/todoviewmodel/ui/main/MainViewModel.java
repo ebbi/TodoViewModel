@@ -1,6 +1,5 @@
 package com.example.todoviewmodel.ui.main;
 
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.todoviewmodel.Todo;
@@ -11,6 +10,8 @@ import java.util.ArrayList;
 public class MainViewModel extends ViewModel {
 
     private int todoIndex = 0;
+
+
     private Todo selectedTodo = new Todo();
 //    private final MutableLiveData<Todo> selectedTodo = new MutableLiveData<Todo>();
 
@@ -38,7 +39,18 @@ public class MainViewModel extends ViewModel {
         return todoRepository.getTodo(todoIndex);
     }
 
+    public void setTodo(int todoIndex, Todo todo) {
+        todoRepository.setTodo(todoIndex, todo);
+    }
+
+/*
     public void setSelectedTodo(Todo selectedTodo) {
         this.selectedTodo = selectedTodo;
     }
+
+    public Todo getSelectedTodo() {
+        return selectedTodo;
+    }
+ */
+
 }

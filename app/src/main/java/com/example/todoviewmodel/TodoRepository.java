@@ -49,4 +49,7 @@ public class TodoRepository {
         return this.mTodoList.get(todoIndex);
     }
 
+    public Todo setTodo(int todoIndex, Todo todo) {
+        return this.mTodoList.set(todoIndex, todo);
+    }
 }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.todoviewmodel.R;
@@ -30,12 +31,12 @@ public class MainFragment extends Fragment {
     private TextView mTextViewDate;
     private Button mButtonNext;
     private Button mButtonPrev;
+    private Button mButtonTodoDetail;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
-//        return inflater.inflate(R.layout.main_fragment, container, false);
 
         View view = inflater.inflate(R.layout.main_fragment, container, false);
         mViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
@@ -55,7 +56,7 @@ public class MainFragment extends Fragment {
             }
         });
 
-        Button mButtonPrev = (Button) view.findViewById(R.id.buttonPrev);
+        mButtonPrev = (Button) view.findViewById(R.id.buttonPrev);
         mButtonPrev.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -70,6 +71,21 @@ public class MainFragment extends Fragment {
             }
         });
 
+        mButtonTodoDetail = (Button) view.findViewById(R.id.buttonTodoDetail);
+        mButtonTodoDetail.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                mViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
+                TodoDetailFragment todoDetailFragment = TodoDetailFragment.newInstance();
+
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, todoDetailFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+            }
+        });
 
         return view;
     }
